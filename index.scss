@@ -1,0 +1,52 @@
+@use "./palette";
+@use "./partials";
+body {
+    background-color: palette.$primary;
+}
+.container {
+    & #img {
+        box-shadow: 0px 0px 30px 10px palette.$secondary;
+        border: 2px solid palette.$secondary;
+        border-radius: 50%;
+
+        margin-bottom: 20px;
+    }
+    @extend %center;
+    & > * {
+        @extend %center;
+    }
+
+    margin: auto;
+    width: 60vw;
+    height: 90vh;
+    flex-direction: column;
+
+    &__details {
+        margin: 0px auto;
+        flex-direction: row;
+        width: 600px;
+        border: 2px solid palette.$tertiary;
+        border-radius: 50px;
+        background-color: rgb(214, 214, 214);
+        & > ul {
+            list-style: none;
+        }
+    }
+    & > button {
+        margin: 0px auto;
+        margin-top: 50px;
+        border-radius: 20px;
+        width: 300px;
+        height: 50px;
+        align-items: center;
+        font-size: 20px;
+    }
+    & #name {
+        color: palette.$tertiary;
+        margin-top: 10px;
+    }
+    & #gender {
+        color: palette.$tertiary;
+        margin: 5px;
+    }
+}
